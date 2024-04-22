@@ -1,0 +1,42 @@
+﻿<Window x:Class="KursovayaRabotaApp.AddAuthorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить автора" Height="200" Width="400">
+    <!-- Определение окна с названием "Добавить автора" и размерами 200x400 -->
+
+    <Grid Margin="10">
+        <!-- Создание сетки с отступом 10 по всем сторонам -->
+
+        <Grid.RowDefinitions>
+            <!-- Определение строк сетки -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <!-- Все строки, кроме последней, автоматически подстраиваются под размер содержимого. Последняя строка занимает все оставшееся пространство. -->
+        </Grid.RowDefinitions>
+
+        <Label Content="Фамилия автора" Grid.Row="0" Margin="0,0,0,5"/>
+        <!-- Метка с текстом "Фамилия автора", расположенная в первой строке сетки -->
+
+        <TextBox x:Name="surnameTextBox" Grid.Row="1" Margin="0,0,0,10"/>
+        <!-- Текстовое поле для ввода фамилии автора, расположенное во второй строке сетки -->
+
+        <Label Content="Номер телефона автора" Grid.Row="2" Margin="0,0,0,5"/>
+        <!-- Метка с текстом "Номер телефона автора", расположенная в третьей строке сетки -->
+
+        <TextBox x:Name="mobileNumberTextBox" Grid.Row="3" Margin="0,0,0,10"/>
+        <!-- Текстовое поле для ввода номера телефона автора, расположенное в четвертой строке сетки -->
+
+        <DockPanel Grid.Row="4" LastChildFill="False">
+            <!-- Панель DockPanel, расположенная в пятой строке сетки. LastChildFill="False" означает, что последний дочерний элемент не заполняет все оставшееся пространство. -->
+
+            <Button x:Name="addButton" Content="Добавить" Margin="10,0,0,0" Width="75" Height="25" DockPanel.Dock="Left"/>
+            <!-- Кнопка "Добавить", расположенная слева на панели DockPanel -->
+
+            <Button x:Name="cancelButton" Content="Отмена" Margin="0,0,10,0" Width="75" Height="25" DockPanel.Dock="Right"/>
+            <!-- Кнопка "Отмена", расположенная справа на панели DockPanel -->
+        </DockPanel>
+    </Grid>
+</Window>

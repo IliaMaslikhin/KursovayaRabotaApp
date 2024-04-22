@@ -1,0 +1,40 @@
+﻿<Window x:Class="KursovayaRabotaApp.RemoveBookWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="RemoveBookWindow" Height="300" Width="400">
+    <!-- Определение окна с названием "RemoveBookWindow" и размерами 300x400 -->
+
+    <Grid>
+        <!-- Создание сетки без отступов -->
+
+        <Grid.RowDefinitions>
+            <!-- Определение строк сетки -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Первая и третья строки автоматически подстраиваются под размер содержимого, вторая строка занимает все оставшееся пространство -->
+        </Grid.RowDefinitions>
+
+        <Label Content="Выберите книги, которые вы хотите удалить" Grid.Row="0" Margin="10"/>
+        <!-- Метка с текстом "Выберите книги, которые вы хотите удалить", расположенная в первой строке сетки -->
+
+        <ScrollViewer Grid.Row="1" Margin="10">
+            <!-- Область прокрутки, расположенная во второй строке сетки -->
+
+            <StackPanel Name="booksPanel"/>
+            <!-- Панель StackPanel, которая будет использоваться для отображения списка книг -->
+        </ScrollViewer>
+
+        <DockPanel Grid.Row="2" LastChildFill="False">
+            <!-- Панель DockPanel, расположенная в третьей строке сетки. LastChildFill="False" означает, что последний дочерний элемент не заполняет все оставшееся пространство. -->
+
+            <Button Name="removeButton" Content="Удалить" Width="75" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+            <!-- Кнопка "Удалить", расположенная слева на панели DockPanel. Ширина кнопки - 75. -->
+
+            <Button Name="cancelButton" Content="Отмена" Width="75" Margin="0,0,10,0" DockPanel.Dock="Right"/>
+            <!-- Кнопка "Отмена", расположенная справа на панели DockPanel. Ширина кнопки - 75. -->
+        </DockPanel>
+    </Grid>
+</Window>
+
+

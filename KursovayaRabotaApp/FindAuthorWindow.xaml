@@ -1,0 +1,40 @@
+﻿<Window x:Class="KursovayaRabotaApp.FindAuthorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FindAuthorWindow" Height="200" Width="400">
+    <!-- Определение окна с названием "FindAuthorWindow" и размерами 200x400 -->
+
+    <Grid>
+        <!-- Создание сетки без отступов -->
+
+        <Grid.RowDefinitions>
+            <!-- Определение строк сетки -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Все строки автоматически подстраиваются под размер содержимого -->
+        </Grid.RowDefinitions>
+
+        <Label Content="Введите фамилию, чтобы выполнить поиск" Grid.Row="0" Margin="10" FontSize="12"/>
+        <!-- Метка с текстом "Введите фамилию, чтобы выполнить поиск", расположенная в первой строке сетки. Размер шрифта - 12. -->
+
+        <TextBox Name="surnameTextBox" Grid.Row="1" Width="200" Margin="10"/>
+        <!-- Текстовое поле для ввода фамилии автора, расположенное во второй строке сетки. Ширина поля - 200. -->
+
+        <DockPanel Grid.Row="2" LastChildFill="False">
+            <!-- Панель DockPanel, расположенная в третьей строке сетки. LastChildFill="False" означает, что последний дочерний элемент не заполняет все оставшееся пространство. -->
+
+            <Button Name="findButton" Content="Найти" Width="75" Margin="10,0,0,0" DockPanel.Dock="Left"/>
+            <!-- Кнопка "Найти", расположенная слева на панели DockPanel. Ширина кнопки - 75. -->
+
+            <Button Name="cancelButton" Content="Отмена" Width="75" Margin="0,0,10,0" DockPanel.Dock="Right"/>
+            <!-- Кнопка "Отмена", расположенная справа на панели DockPanel. Ширина кнопки - 75. -->
+        </DockPanel>
+    </Grid>
+</Window>
+
+
+
+
+
